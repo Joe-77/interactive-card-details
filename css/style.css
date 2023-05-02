@@ -1,0 +1,296 @@
+
+:root {
+  --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+input:focus {
+  outline: none;
+}
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.left-card img {
+  width: 300px;
+  height: 100vh;
+}
+.left-card {
+  position: relative;
+  width: 300px;
+  height: 100vh;
+  background-image: url(../img/bg-main-desktop.png);
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+.all-front {
+  position: absolute;
+  top: 35%;
+  left: 80px;
+  transform: translatey(-35%);
+}
+
+.all-back {
+  position: absolute;
+  top: 70%;
+  left: 150px;
+  transform: translateY(-70%);
+}
+
+.img-front,
+.img-back {
+  width: 300px;
+}
+
+.container {
+  display: flex;
+}
+
+/* ************************************************************ */
+
+/* Start Front Card And Back */
+
+.front-card,
+.back-card {
+  position: relative;
+  width: 300px;
+}
+
+.front-card::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--White);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.front-card::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  position: absolute;
+  top: 30px;
+  left: 70px;
+}
+
+#credit-number {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  color: var(--White);
+  letter-spacing: 1px;
+}
+#credit-name {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  text-transform: uppercase;
+  color: var(--White);
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+#credit-month {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  font-size: 12px;
+  color: white;
+}
+#slash {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 12px;
+  color: white;
+}
+#credit-year {
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+  font-size: 12px;
+  color: white;
+}
+#cvc {
+  position: absolute;
+  top: 72px;
+  right: 50px;
+  letter-spacing: 2px;
+  color: var(--White);
+}
+
+@media(max-width: 660px) {
+
+  .container {
+    display: block;
+  }
+
+  .form {
+    margin-top: 70px;
+  }
+
+  .left-card {
+    background-image: url(../img/bg-main-mobile.png);
+    height: 200px;
+    width: -webkit-fill-available;
+  }
+  .img-front, .img-back {
+    width: 200px;
+  }
+  .front-card, .back-card {
+    width: 200px;
+  }
+  #credit-number {
+    letter-spacing: 1px;
+    left: 20px !important;
+    top: 64px;
+    font-size: 10px;
+  }
+  #credit-name,
+  #credit-month,
+  #credit-year,
+  #slash {
+    bottom: 15px;
+    font-size: 10px;
+  }
+
+  .all-back {
+    left: 90%;
+    transform: translateX(-90%);
+    top: 50px;
+  }
+
+  .all-front {
+    z-index: 1;
+    top: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #cvc {
+    top: 48px;
+    font-size: 10px;
+}
+
+}
+/* End Front Card And Back */
+
+
+/* Start Form */
+
+
+.form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  width: 270px;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+.date input {
+  width: 70px;
+}
+
+#input-year {
+  margin-left: 10px;
+}
+
+.date-cvc {
+  display: flex;
+  gap: 20px;
+}
+
+.CVC input {
+  width: 100px;
+}
+
+#submit {
+  background-color: var(--Very-dark-violet);
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+form small {
+  display: block;
+  padding-top: 5px;
+  font-size: 10px;
+  color: var(--Red);
+}
+
+.hide {
+  display: none;
+}
+
+.display-none {
+  display: none;
+}
+
+/* End Form */
+
+
+
+/* Start Done */
+
+.done {
+  text-align: center;
+}
+
+.done img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.done h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.done p {
+  font-size: 14px;
+  color: gray;
+}
+
+/* End Done */

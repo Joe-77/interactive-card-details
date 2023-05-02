@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive-card</title>
+    <link rel="icon" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+
+          <div class="card">
+            <div class="left-card">
+              <!-- <img src="img/bg-main-desktop.png" alt=""> -->
+            </div>
+  
+            <div class="all-front">
+              <div class="front-card">
+                <img class="img-front" src="img/bg-card-front.png" alt="">
+                <span id="credit-number">OOOO OOOO OOOO OOOO OOOO</span>
+                <span id="credit-name">yousef abdallah</span>
+                <span id="credit-month">OO</span>
+                <span id="slash">/</span>
+                <span id="credit-year">OO</span>
+              </div>
+  
+            </div>
+  
+            <div class="all-back">
+              <div class="back-card">
+                <img class="img-back" src="img/bg-card-back.png" alt="">
+                <span id="cvc">000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form">
+
+
+            <form>
+
+              <div class="All-Form">
+
+
+                <div class="Card-Name">
+                  <label for="name">cardholder name</label>
+                  <input id="name" type="text" placeholder="e.g.Yousef Abdallah" autofocus>
+                  <small class="hide hide-name">Wrong name</small>
+                </div>
+  
+                <div class="Card-Number">
+                  <label for="number-card">card number</label>
+                  <input type="text" id="number-card" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                  <small class="hide hide-card">Wrong format,numbers only</small>
+                </div>
+  
+                <div class="date-cvc">
+  
+                  <div class="date">
+                    <label for="date">exp. date (mm/yy)</label>
+                    <input type="text" id="input-month" placeholder="MM" maxlength="2">
+                    <input type="text" id="input-year" placeholder="YY"  maxlength="2">
+                    <small class="hide hide-date">Can 't be blank</small>
+                  </div>
+  
+                  <div class="CVC">
+                    <label for="input-cvc">cvc</label>
+                    <input type="text" id="input-cvc" placeholder="e.g. 123" maxlength="3">
+                    <small class="hide hide-cvc">Can 't be blank</small>
+                  </div>
+  
+                </div>
+
+
+              </div>
+
+              <!-- <input type="submit" id="submit" value="Confirm"> -->
+
+
+              <div class="done display-none">
+                <img src="img/icon-complete.svg" alt="">
+                <h2>thank you!</h2>
+                <p>We 've added your card details</p>
+              </div>
+
+              <button id="submit">Confirm</button>
+
+
+            </form>
+
+          </div>
+
+    </div>
+
+</body>
+
+    <script src="js/main.js"></script>
+</html>
